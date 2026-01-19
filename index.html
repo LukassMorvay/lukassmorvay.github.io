@@ -3,347 +3,401 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="Lukáš Morvay — Personal portfolio website" />
-    <title>Lukáš Morvay — Portfolio</title>
-
-    <!-- Fonts (optional, looks modern) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
+    <title>Lukáš Morvay - IT Developer & Business Information Technology Student</title>
+    <meta name="description" content="Portfolio of Lukáš Morvay - IT Developer specializing in web development, automation, and business information technology.">
     <link rel="stylesheet" href="css/style.css" />
   </head>
-
   <body>
-    <!-- Decorative background (purely visual, no image needed) -->
-    <div class="bg" aria-hidden="true">
-      <div class="bg__blob bg__blob--1"></div>
-      <div class="bg__blob bg__blob--2"></div>
-      <div class="bg__grid"></div>
-    </div>
-
-    <!-- Top nav -->
-    <header class="header">
-      <a class="brand" href="#top" aria-label="Go to top">
-        <span class="brand__mark">LM</span>
-        <span class="brand__text">Lukáš Morvay</span>
-      </a>
-
-      <nav class="nav" aria-label="Primary">
-        <a class="nav__link" href="#work">Work</a>
-        <a class="nav__link" href="#projects">Projects</a>
-        <a class="nav__link" href="#skills">Skills</a>
-        <a class="nav__link" href="#contact">Contact</a>
-      </nav>
-
-      <div class="header__actions">
-        <button class="btn btn--ghost" id="themeToggle" type="button" aria-label="Toggle theme">
-          <span class="btn__icon" aria-hidden="true">☾</span>
-          <span class="btn__text">Theme</span>
-        </button>
-
-        <a class="btn btn--primary" href="#contact">
-          <span class="btn__text">Let’s talk</span>
-          <span class="btn__icon" aria-hidden="true">→</span>
-        </a>
-
-        <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="nav-container">
+        <a href="#" class="logo">LM</a>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
-    </header>
+    </nav>
 
-    <!-- Mobile menu -->
-    <div class="mobile" id="mobileMenu" hidden>
-      <nav class="mobile__nav" aria-label="Mobile">
-        <a class="mobile__link" href="#work">Work</a>
-        <a class="mobile__link" href="#projects">Projects</a>
-        <a class="mobile__link" href="#education">Education</a>
-        <a class="mobile__link" href="#skills">Skills</a>
-        <a class="mobile__link" href="#contact">Contact</a>
-      </nav>
-    </div>
-
-    <main id="top" class="main">
-      <!-- HERO -->
-      <section class="hero">
-        <div class="container hero__grid">
-          <div class="hero__content reveal">
-            <p class="pill">
-              <span class="pill__dot" aria-hidden="true"></span>
-              Business Information Technology (BSc) · University of Twente
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <p class="hero-greeting">Hi, I'm</p>
+            <h1 class="hero-name">Lukáš Morvay</h1>
+            <p class="hero-title">IT Developer & BIT Student</p>
+            <p class="hero-description">
+              Building internal web systems and automating workflows. 
+              Passionate about creating efficient digital solutions.
             </p>
-
-            <h1 class="hero__title">
-              Hi, I’m <span class="accent">Lukáš Morvay</span>.
-              <br />
-              I build <span class="accent">web systems</span> and automate workflows.
-            </h1>
-
-            <p class="hero__lead">
-              Motivated IT student experienced in building internal web systems and digitizing operations.
-              I enjoy shipping clean, modern interfaces with practical backend logic.
-            </p>
-
-            <div class="hero__cta">
-              <a class="btn btn--primary" href="#projects">
-                <span class="btn__text">See projects</span>
-                <span class="btn__icon" aria-hidden="true">↘</span>
+            <div class="hero-buttons">
+              <a href="#projects" class="btn btn-primary">View Projects</a>
+              <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+            <div class="hero-socials">
+              <a href="https://github.com/lukassmorvay" target="_blank" rel="noopener" class="social-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
               </a>
-
-              <a class="btn btn--ghost" href="#work">
-                <span class="btn__text">Work experience</span>
-                <span class="btn__icon" aria-hidden="true">⤓</span>
+              <a href="mailto:morvay04@gmail.com" class="social-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
               </a>
             </div>
+          </div>
+          <div class="hero-image">
+            <div class="image-placeholder">
+                <img src="images/cropped_pic.jpg" alt="Lukáš Morvay" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span></span>
+      </div>
+    </section>
 
-            <div class="hero__meta">
-              <div class="meta">
-                <span class="meta__k">Location</span>
-                <span class="meta__v">Enschede, Netherlands</span>
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              I'm a motivated IT student at the University of Twente, specializing in Business Information Technology. 
+              With hands-on experience in building internal web systems and automating workflows, I'm passionate about 
+              creating efficient digital solutions that make a real impact.
+            </p>
+            <p>
+              Currently based in Enschede, Netherlands, I've worked on various projects ranging from full-stack web 
+              applications to AI-powered tools. I thrive in challenging environments where I can apply my technical 
+              and analytical skills to solve complex problems.
+            </p>
+            <div class="about-info">
+              <div class="info-item">
+                <span class="info-label">Location</span>
+                <span class="info-value">Enschede, Netherlands</span>
               </div>
-              <div class="meta">
-                <span class="meta__k">Email</span>
-                <a class="meta__v link" href="mailto:morvay04@gmail.com">morvay04@gmail.com</a>
+              <div class="info-item">
+                <span class="info-label">Education</span>
+                <span class="info-value">BSc Business Information Technology</span>
               </div>
-              <div class="meta">
-                <span class="meta__k">Phone</span>
-                <a class="meta__v link" href="tel:+421904155010">+421 904 155 010</a>
+              <div class="info-item">
+                <span class="info-label">University</span>
+                <span class="info-value">University of Twente</span>
               </div>
             </div>
           </div>
-
-          <!-- Image placeholder (you’ll add later) -->
-          <div class="portrait" aria-label="Portrait">
-            <div class="portrait__ring"></div>
-
-            <img
-                class="portrait__img"
-                src="images/cropped_pic.jpg"
-                alt="Portrait of Lukáš Morvay"
-                loading="lazy"
-            />
-            </div>
-
-
-            <div class="quick">
-              <div class="quick__row">
-                <span class="quick__label">Focus</span>
-                <span class="quick__value">Web Systems · Automation · Data</span>
-              </div>
-              <div class="quick__row">
-                <span class="quick__label">Stack</span>
-                <span class="quick__value">HTML/CSS/JS · Python · SQL · Git</span>
-              </div>
-              <div class="quick__row">
-                <span class="quick__label">Languages</span>
-                <span class="quick__value">EN C1 · DE B1 · ES B1 · SK native</span>
-              </div>
-            </div>
-          </aside>
         </div>
+      </div>
+    </section>
 
-        <div class="scrollhint" aria-hidden="true">
-          <span class="scrollhint__line"></span>
-          <span class="scrollhint__text">Scroll</span>
-        </div>
-      </section>
-
-      <!-- WORK EXPERIENCE -->
-      <section id="work" class="section">
-        <div class="container">
-          <div class="section__head reveal">
-            <h2 class="section__title">Work experience</h2>
-            <p class="section__subtitle">Hands-on work building internal tools and improving operations.</p>
-          </div>
-
-          <div class="cards">
-            <article class="card reveal">
-              <div class="card__top">
-                <h3 class="card__title">Part-time IT Assistant · AUTOGLAS, s.r.o.</h3>
-                <p class="card__meta">June 2023 – September 2023 · July 2024 – September 2024 · July 2025 – September 2025</p>
-              </div>
-
-              <ul class="list">
-                <li>Built a custom internal scheduling and calendar system using full-stack web development.</li>
-                <li>Digitized operational workflows and improved task planning.</li>
-                <li>Supported customer communication, inventory tracking, and e-shop operations.</li>
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+      <div class="container">
+        <h2 class="section-title">Work Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">July 2025 – September 2025</div>
+              <h3>Part-Time IT Assistant</h3>
+              <h4>Autoglas, s.r.o.</h4>
+              <ul>
+                <li>Built a custom internal scheduling and calendar system using full-stack web development</li>
+                <li>Digitized operational workflows and improved task planning</li>
+                <li>Supported customer communication, inventory tracking, and e-shop operations</li>
               </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- PROJECTS -->
-      <section id="projects" class="section">
-        <div class="container">
-          <div class="section__head reveal">
-            <h2 class="section__title">Projects</h2>
-            <p class="section__subtitle">A few highlights — we can expand these into dedicated pages later.</p>
-          </div>
-
-          <div class="grid grid--3">
-            <article class="tile reveal">
-              <div class="tile__icon" aria-hidden="true">🗓️</div>
-              <h3 class="tile__title">Internal Scheduling System</h3>
-              <p class="tile__text">
-                Full-stack calendar system to digitize workflows and improve task scheduling (HTML, CSS, JavaScript + backend).
-              </p>
-              <p class="tile__tag">Operations · Productivity</p>
-            </article>
-
-            <article class="tile reveal">
-              <div class="tile__icon" aria-hidden="true">🤖</div>
-              <h3 class="tile__title">AI Recruitment Tool (Team)</h3>
-              <p class="tile__text">
-                Conceptual AI-powered recruitment system with workflow automation and candidate ranking, delivered as a detailed report.
-              </p>
-              <p class="tile__tag">AI · Systems design</p>
-            </article>
-
-            <article class="tile reveal">
-              <div class="tile__icon" aria-hidden="true">🌐</div>
-              <h3 class="tile__title">University Website Application (Team)</h3>
-              <p class="tile__text">
-                Web application with interactive features and backend logic; awarded a certificate for Best Website Application Project.
-              </p>
-              <p class="tile__tag">Web app · Awarded</p>
-            </article>
-
-            <article class="tile reveal">
-                <div class="tile__icon" aria-hidden="true">🏆</div>
-                <h3 class="tile__title"> Award-Winning Product Design<br /> UV-Tracking Smart Bracelet (Team)</h3>
-                <p class="tile__text">
-                    Designed a modular UV-exposure tracking bracelet with a companion app, combining physical customization, data analytics, and a subscription-based online business model.
-                </p>
-                <p class="tile__tag">Product Design · IoT · Data</p>
-                </article>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- EDUCATION -->
-      <section id="education" class="section">
-        <div class="container">
-          <div class="section__head reveal">
-            <h2 class="section__title">Education</h2>
-            <p class="section__subtitle">Academic background.</p>
-          </div>
-
-          <div class="cards">
-            <article class="card reveal">
-              <div class="split">
-                <div>
-                  <h3 class="card__title">University of Twente</h3>
-                  <p class="card__meta">BSc — Business Information Technology (ongoing)</p>
-                </div>
-                <p class="card__meta">Enschede · Sep 2023 – Present</p>
-              </div>
-            </article>
-
-            <article class="card reveal">
-              <div class="split">
-                <div>
-                  <h3 class="card__title">Spojená škola, Jána Bottu (Gymnázium)</h3>
-                  <p class="card__meta">Trnava</p>
-                </div>
-                <p class="card__meta">Sep 2019 – Jun 2023</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- SKILLS -->
-      <section id="skills" class="section">
-        <div class="container">
-          <div class="section__head reveal">
-            <h2 class="section__title">Skills</h2>
-            <p class="section__subtitle">Technical strengths and tools I work with.</p>
-          </div>
-
-          <div class="grid grid--2">
-            <article class="card reveal">
-              <h3 class="card__title">Technical</h3>
-              <div class="chips">
-                <span class="chip">Python (Intermediate)</span>
-                <span class="chip">Java (Intermediate)</span>
-                <span class="chip">SQL (Intermediate)</span>
-                <span class="chip">R (Basic)</span>
-                <span class="chip">HTML</span>
-                <span class="chip">CSS</span>
-                <span class="chip">JavaScript</span>
-                <span class="chip">REST APIs (Basic–Intermediate)</span>
-                <span class="chip">Git / GitHub / GitLab</span>
-              </div>
-            </article>
-
-            <article class="card reveal">
-              <h3 class="card__title">Data & platforms</h3>
-              <div class="chips">
-                <span class="chip">Tableau</span>
-                <span class="chip">Qlik Sense</span>
-                <span class="chip">RapidMiner</span>
-                <span class="chip">Microsoft Office (Advanced)</span>
-                <span class="chip">Mendix (Intermediate)</span>
-              </div>
-            </article>
-
-            <article class="card reveal">
-              <h3 class="card__title">Languages</h3>
-              <div class="chips">
-                <span class="chip">English (C1)</span>
-                <span class="chip">German (B1)</span>
-                <span class="chip">Spanish (B1)</span>
-                <span class="chip">Slovak (Native)</span>
-              </div>
-            </article>
-
-            <article class="card reveal">
-              <h3 class="card__title">Interests</h3>
-              <p class="muted">
-                Fitness & sports (gym, skiing, running, basketball), travel and discovering new cultures,
-                and web development / side projects (React).
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact" class="section section--last">
-        <div class="container">
-          <div class="cta reveal">
-            <div class="cta__text">
-              <h2 class="cta__title">Want to work together?</h2>
-              <p class="cta__subtitle">
-                Feel free to reach out — I’m open to internships, part-time roles, and collaborations.
-              </p>
             </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">July 2024 – September 2024</div>
+              <h3>Part-Time IT Assistant</h3>
+              <h4>Autoglas, s.r.o.</h4>
+              <ul>
+                <li>Continued development of internal systems</li>
+                <li>Enhanced workflow automation tools</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">June 2023 – September 2023</div>
+              <h3>Part-Time IT Assistant</h3>
+              <h4>Autoglas, s.r.o.</h4>
+              <ul>
+                <li>Initiated development of scheduling system</li>
+                <li>Began digitization of operational processes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="cta__actions">
-              <a class="btn btn--primary" href="mailto:morvay04@gmail.com">
-                <span class="btn__text">Email me</span>
-                <span class="btn__icon" aria-hidden="true">✉</span>
-              </a>
-              <a class="btn btn--ghost" href="https://github.com/lukassmorvay" target="_blank" rel="noreferrer">
-                <span class="btn__text">GitHub</span>
-                <span class="btn__icon" aria-hidden="true">↗</span>
-              </a>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Internal Scheduling System</h3>
+              <span class="project-tag">Full-Stack</span>
+            </div>
+            <p class="project-description">
+              Built a full-stack calendar system to digitize workflows and improve task scheduling 
+              for Autoglas, s.r.o. Implemented with HTML, CSS, JavaScript, and custom backend logic.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">Backend</span>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <div class="project-header">
+              <h3>AI Recruitment Tool</h3>
+              <span class="project-tag">University Project</span>
+            </div>
+            <p class="project-description">
+              Planned a conceptual AI-powered recruitment system with workflow automation and 
+              candidate ranking. Delivered a detailed report as part of a team project.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">AI</span>
+              <span class="tech-badge">Automation</span>
+              <span class="tech-badge">Research</span>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <div class="project-header">
+              <h3>University Website Application</h3>
+              <span class="project-tag">Award Winner</span>
+            </div>
+            <p class="project-description">
+              Developed a web application with interactive features and backend logic. 
+              Awarded certificate for Best Website Application Project.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">Web Dev</span>
+              <span class="tech-badge">Backend</span>
+              <span class="tech-badge">Team Project</span>
             </div>
           </div>
 
-          <footer class="footer">
-            <p class="footer__text">© <span id="year"></span> Lukáš Morvay · Built with GitHub Pages</p>
-            <a class="link" href="#top">Back to top ↑</a>
-          </footer>
+          <div class="project-card">
+            <div class="project-header">
+                <h3>UV-Tracking Smart Bracelet</h3>
+                <span class="project-tag">Award Winner</span>
+            </div>
+            <p class="project-description">
+                Designed a modular UV-exposure tracking bracelet with a companion app, combining 
+                physical customization, data analytics, and a subscription-based online business model. 
+                Award-winning product design project.
+            </p>
+            <div class="project-tech">
+                <span class="tech-badge">Product Design</span>
+                <span class="tech-badge">IoT</span>
+                <span class="tech-badge">App Design</span>
+                <span class="tech-badge">Business Model</span>
+            </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Programming</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <span class="skill-name">Python</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="70"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Java</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="70"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">SQL</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="70"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">R</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="40"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Web Development</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <span class="skill-name">HTML/CSS</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="75"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">JavaScript</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="70"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">React</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="60"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">REST APIs</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="65"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Tools & Platforms</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <span class="skill-name">Git/GitHub</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="70"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Tableau</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="60"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Mendix</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="70"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Microsoft Office</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="90"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Languages</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <span class="skill-name">English (C1)</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="90"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">German (B1)</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="60"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Spanish (B1)</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="60"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Slovak (Native)</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+          <p class="contact-intro">
+            I'm currently open to new opportunities and collaborations. 
+            Whether you have a question or just want to say hi, feel free to reach out!
+          </p>
+          <div class="contact-methods">
+            <a href="mailto:morvay04@gmail.com" class="contact-card">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <h3>Email</h3>
+              <p>morvay04@gmail.com</p>
+            </a>
+            
+            <a href="tel:+421904155010" class="contact-card">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <h3>Phone</h3>
+              <p>+421 904 155 010</p>
+            </a>
+            
+            <a href="https://github.com/lukassmorvay" target="_blank" rel="noopener" class="contact-card">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+              <h3>GitHub</h3>
+              <p>github.com/lukassmorvay</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 Lukáš Morvay. Built with passion and code.</p>
+      </div>
+    </footer>
 
     <script src="js/script.js"></script>
   </body>
