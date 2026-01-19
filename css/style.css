@@ -896,19 +896,3 @@ a {
         transition: none;
     }
 }
-
-/* When quick is under the hero meta, make it stack nicely on small screens */
-.quick__row {
-    align-items: center;
-}
-
-@media (max-width: 980px) {
-    .quick__row {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .quick__value {
-        text-align: left;
-    }
-}
