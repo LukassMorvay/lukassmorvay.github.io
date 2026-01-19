@@ -436,3 +436,30 @@ window.addEventListener('load', () => {
   // Log page load time
   console.log('%c⚡ Page loaded in ' + (performance.now() / 1000).toFixed(2) + 's', 'color: #14b8a6; font-size: 12px;');
 });
+
+// ===================================
+// THEME TOGGLE
+// ===================================
+
+const themeToggle = document.querySelector('.theme-toggle');
+const body = document.body;
+
+// Check for saved theme preference or default to dark
+const currentTheme = localStorage.getItem('theme') || 'dark';
+if (currentTheme === 'light') {
+  body.classList.add('light-mode');
+}
+
+themeToggle.addEventListener('click', () => {
+  body.classList.toggle('light-mode');
+  
+  // Save preference
+  const theme = body.classList.contains('light-mode') ? 'light' : 'dark';
+  localStorage.setItem('theme', theme);
+  
+  // Add click animation
+  themeToggle.style.transform = 'scale(0.9)';
+  setTimeout(() => {
+    themeToggle.style.transform = 'scale(1)';
+  }, 150);
+});

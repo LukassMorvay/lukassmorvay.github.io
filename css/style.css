@@ -989,3 +989,189 @@ section {
         grid-template-columns: 1fr;
     }
 }
+
+/* ===================================
+   LIGHT MODE
+   =================================== */
+body.light-mode {
+    --primary: #5b21b6;
+    --primary-dark: #4c1d95;
+    --primary-light: #7c3aed;
+    --secondary: #db2777;
+    --accent: #0d9488;
+    --dark: #ffffff;
+    --dark-lighter: #f8fafc;
+    --dark-card: #ffffff;
+    --text: #0f172a;
+    --text-muted: #475569;
+    --border: rgba(15, 23, 42, 0.1);
+    --gradient-bg: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+body.light-mode .nav {
+    background: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid var(--border);
+}
+
+body.light-mode .nav.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .hero::before {
+    background:
+        radial-gradient(circle at 20% 50%, rgba(91, 33, 182, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(219, 39, 119, 0.08) 0%, transparent 50%);
+}
+
+body.light-mode .social-link {
+    background: rgba(91, 33, 182, 0.05);
+    border: 1px solid var(--border);
+}
+
+body.light-mode .social-link:hover {
+    background: var(--primary);
+    color: white;
+}
+
+body.light-mode .info-item {
+    background: rgba(91, 33, 182, 0.03);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .info-item:hover {
+    background: rgba(91, 33, 182, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .timeline::before {
+    background: var(--gradient-primary);
+}
+
+body.light-mode .timeline-dot {
+    background: var(--primary);
+    border: 3px solid var(--dark);
+    box-shadow: 0 0 20px rgba(91, 33, 182, 0.4);
+}
+
+body.light-mode .timeline-content {
+    background: var(--dark-card);
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .timeline-content:hover {
+    box-shadow: 0 10px 40px rgba(91, 33, 182, 0.15);
+}
+
+body.light-mode .project-card {
+    background: var(--dark-card);
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .project-card:hover {
+    box-shadow: 0 20px 60px rgba(91, 33, 182, 0.15);
+}
+
+body.light-mode .project-tag {
+    background: rgba(91, 33, 182, 0.1);
+    color: var(--primary);
+}
+
+body.light-mode .tech-badge {
+    background: rgba(91, 33, 182, 0.05);
+    border: 1px solid var(--border);
+}
+
+body.light-mode .tech-badge:hover {
+    background: rgba(91, 33, 182, 0.15);
+    color: var(--primary);
+}
+
+body.light-mode .skill-category {
+    background: var(--dark-card);
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .skill-category:hover {
+    box-shadow: 0 15px 50px rgba(91, 33, 182, 0.12);
+}
+
+body.light-mode .skill-bar {
+    background: rgba(91, 33, 182, 0.1);
+}
+
+body.light-mode .contact-card {
+    background: var(--dark-card);
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .contact-card:hover {
+    box-shadow: 0 20px 60px rgba(91, 33, 182, 0.15);
+}
+
+body.light-mode .footer {
+    background: var(--dark);
+    border-top: 1px solid var(--border);
+}
+
+body.light-mode .particle {
+    background: rgba(91, 33, 182, 0.3);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+    transition: var(--transition);
+    z-index: 999;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4);
+}
+
+.theme-toggle svg {
+    color: white;
+    transition: var(--transition);
+}
+
+.sun-icon {
+    display: none;
+}
+
+.moon-icon {
+    display: block;
+}
+
+body.light-mode .sun-icon {
+    display: block;
+}
+
+body.light-mode .moon-icon {
+    display: none;
+}
+
+@media (max-width: 640px) {
+    .theme-toggle {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
