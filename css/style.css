@@ -221,6 +221,25 @@ body {
     animation: fadeInUp 0.6s ease-out 0.2s both;
 }
 
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    margin-bottom: 25px;
+    background: rgba(20, 184, 166, 0.1);
+    border: 1px solid rgba(20, 184, 166, 0.3);
+    border-radius: 50px;
+    color: var(--accent);
+    font-size: 0.95rem;
+    animation: fadeInUp 0.6s ease-out 0.25s both;
+}
+
+.hero-badge strong {
+    color: var(--accent);
+    font-weight: 700;
+}
+
 .hero-description {
     font-size: 1.1rem;
     color: var(--text-muted);
@@ -455,7 +474,7 @@ section {
 
 .about-info {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
     margin-top: 40px;
 }
@@ -595,6 +614,39 @@ section {
     font-weight: bold;
 }
 
+/* Education section highlight (Cum Laude entry) */
+.education {
+    background: var(--dark);
+}
+
+.timeline-dot-highlight {
+    background: var(--accent);
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.6);
+}
+
+.timeline-content-highlight {
+    border-color: rgba(20, 184, 166, 0.4);
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.06), var(--dark-card) 60%);
+}
+
+.timeline-content-highlight:hover {
+    border-color: var(--accent);
+    box-shadow: 0 10px 40px rgba(20, 184, 166, 0.25);
+}
+
+.cum-laude-pill {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: rgba(20, 184, 166, 0.12);
+    border: 1px solid rgba(20, 184, 166, 0.35);
+    border-radius: 20px;
+    vertical-align: middle;
+}
+
 /* ===================================
    PROJECTS SECTION
    =================================== */
@@ -688,6 +740,21 @@ section {
     background: rgba(99, 102, 241, 0.15);
     color: var(--primary-light);
     transform: translateY(-2px);
+}
+
+/* Thesis project highlight */
+.project-card-highlight {
+    border-color: rgba(20, 184, 166, 0.35);
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.06), var(--dark-card) 55%);
+}
+
+.project-card-highlight::before {
+    background: linear-gradient(90deg, var(--accent), var(--primary));
+}
+
+.project-tag-thesis {
+    background: rgba(20, 184, 166, 0.12);
+    color: var(--accent);
 }
 
 /* ===================================
@@ -1077,6 +1144,19 @@ body.light-mode .project-card:hover {
 body.light-mode .project-tag {
     background: rgba(91, 33, 182, 0.1);
     color: var(--primary);
+}
+
+body.light-mode .project-card-highlight {
+    background: linear-gradient(135deg, rgba(13, 148, 136, 0.06), var(--dark-card) 55%);
+}
+
+body.light-mode .timeline-content-highlight {
+    background: linear-gradient(135deg, rgba(13, 148, 136, 0.06), var(--dark-card) 60%);
+}
+
+body.light-mode .hero-badge {
+    background: rgba(13, 148, 136, 0.08);
+    border: 1px solid rgba(13, 148, 136, 0.3);
 }
 
 body.light-mode .tech-badge {
