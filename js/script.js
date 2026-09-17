@@ -166,6 +166,7 @@ projectCards.forEach(card => {
 const heroContent = document.querySelector('.hero-content');
 
 window.addEventListener('scroll', () => {
+  if (window.innerWidth <= 968) return;
   const scrolled = window.pageYOffset;
   if (heroContent && scrolled < window.innerHeight) {
     heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
