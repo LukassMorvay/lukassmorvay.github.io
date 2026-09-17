@@ -373,11 +373,7 @@ body {
 }
 
 .scroll-indicator {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: fadeIn 1s ease-out 1s both;
+    display: none;
 }
 
 .scroll-indicator span {
@@ -1011,16 +1007,6 @@ section {
 
     .hamburger {
         display: flex;
-    }
-
-    .theme-toggle {
-        position: fixed;
-        top: 12px;
-        right: 65px;
-        bottom: auto;
-        width: 40px;
-        height: 40px;
-        z-index: 1001;
     }
 
     .hamburger.active span:nth-child(1) {
