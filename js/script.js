@@ -166,7 +166,7 @@ projectCards.forEach(card => {
 const heroContent = document.querySelector('.hero-content');
 
 window.addEventListener('scroll', () => {
-  if (window.innerWidth <= 968) return;
+  if (window.innerWidth <= 968) return; // skip parallax fade on mobile - hero content is taller than one screen there
   const scrolled = window.pageYOffset;
   if (heroContent && scrolled < window.innerHeight) {
     heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
@@ -361,7 +361,9 @@ particleStyle.textContent = `
 `;
 document.head.appendChild(particleStyle);
 
-createParticles();
+if (window.innerWidth > 968) {
+  createParticles();
+}
 
 // ===================================
 // SCROLL PROGRESS INDICATOR
