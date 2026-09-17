@@ -1013,6 +1013,16 @@ section {
         display: flex;
     }
 
+    .theme-toggle {
+        position: fixed;
+        top: 12px;
+        right: 65px;
+        bottom: auto;
+        width: 40px;
+        height: 40px;
+        z-index: 1001;
+    }
+
     .hamburger.active span:nth-child(1) {
         transform: rotate(45deg) translate(8px, 8px);
     }
