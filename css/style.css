@@ -373,7 +373,11 @@ body {
 }
 
 .scroll-indicator {
-    display: none;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fadeIn 1s ease-out 1s both;
 }
 
 .scroll-indicator span {
@@ -1019,6 +1023,10 @@ section {
 
     .hamburger.active span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    .scroll-indicator {
+        display: none;
     }
 }
 
